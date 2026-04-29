@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle, #1b1035, #05030d);
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.center-text {
+  position: absolute;
+  top: 38%;
+  width: 100%;
+  text-align: center;
+  z-index: 5;
+}
+
+.center-text h1 {
+  font-size: 70px;
+  color: #ff8fbd;
+  text-shadow: 0 0 25px #ff4fa3;
+  animation: float 3s ease-in-out infinite;
+}
+
+.center-text p {
+  margin-top: 10px;
+  font-size: 22px;
+  color: #ffd6e8;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-18px) scale(1.05);
+  }
+}
+
+#rain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.drop {
+  position: absolute;
+  top: -50px;
+  color: #ff8fbd;
+  font-size: 18px;
+  animation: fall linear forwards;
+  text-shadow: 0 0 10px #ff4fa3;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
+
+#musicBtn,
+#settingsBtn {
+  position: fixed;
+  top: 20px;
+  z-index: 10;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: #ff5fa2;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#musicBtn {
+  left: 20px;
+}
+
+#settingsBtn {
+  right: 20px;
+}
+
+.photo-card {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 230px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 30px #ff5fa2;
+  z-index: 4;
+  animation: glow 2.5s infinite alternate;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 15px #ff5fa2;
+  }
+  to {
+    box-shadow: 0 0 45px #ff8fbd;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 20;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-box {
+  width: 350px;
+  background: white;
+  color: #222;
+  padding: 25px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.modal-box h2 {
+  margin-bottom: 20px;
+}
+
+.modal-box label {
+  display: block;
+  margin-top: 15px;
+}
+
+.modal-box input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+#applyBtn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #ff5fa2;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#closeBtn {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  border: none;
+  background: none;
+  font-size: 25px;
+  cursor: pointer;
+}

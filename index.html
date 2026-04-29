@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Endinako</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <audio id="music" src="assets/music.mp3" loop></audio>
+
+  <button id="musicBtn">▶</button>
+  <button id="settingsBtn">⚙</button>
+
+  <div class="center-text">
+    <h1 id="mainText">I Love You</h1>
+    <p>Made specially for you MamChawe💗</p>
+  </div>
+
+  <div class="photo-card">
+    <img src="assets/babe3.jpeg" alt="Her photo">
+  </div>
+
+  <div id="rain"></div>
+
+  <div id="settingsModal" class="modal">
+    <div class="modal-box">
+      <button id="closeBtn">×</button>
+      <h2>⚙️ Page Settings</h2>
+
+      <label>Main Text</label>
+      <input id="textInput" type="text" value="I Love You" />
+
+      <label>Rain Text</label>
+      <input id="rainInput" type="text" value="I love you" />
+      
+
+      <label>Text Color</label>
+      <input id="colorInput" type="color" value="#ff8fbd" />
+
+      <button id="applyBtn">Apply Settings</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
